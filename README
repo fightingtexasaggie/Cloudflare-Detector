@@ -22,9 +22,4 @@ does is turn its own icon red when it encounters Cloudflare. It also puts URL
 details on the service worker's console log, which I'll probably turn into a counter
 on the icon at some point.
 
-Against my better judgement, I put the extension executable in here, dist.crx. I
-don't recommend using it at this point, and instead suggest building it yourself, but
-it's there if you're brave. At some point I'll consider putting the extension
-in the official extensions repository, but this is what I have today.
-
 -Michael
