@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Cloudflare IP Alert",
+  "version": "1.0",
+  "description": "Shows when a website resolves to a Cloudflare IP address.",
+  "permissions": [
+    "webRequest",
+    "webNavigation"
+  ],
+"host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
+

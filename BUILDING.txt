@@ -1,0 +1,16 @@
+Requires: nodejs v20.19+
+I built on Fedora 42, but this should be fairly portable. Be warned,
+this is my first attempt at a browser extension.
+
+To build extension:
+npm install
+npm run build
+
+At this point, you should be able to open your Chromium/Chrome
+browser's extension dialog (chrome://extensions/), put it in
+Developer mode (sorry, this is still pretty raw), then use the
+"Load Unpacked" to load the module from the freshly-created
+dist directory.
+
+Pin the extension icon to the browser bar so you can see
+it change to red when a cloudflare site is detected.
