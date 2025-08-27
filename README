@@ -1,0 +1,30 @@
+Cloudflare is quickly becoming an absolute necessity in dealing with the hoards of
+ill-behaved AI training bots that will drive your server loads through the roof,
+and in come cases act like a distributed denial-of-service attack, especially
+when caught in login loops, or when traversing high-cpu expense routes you may
+have exposed. Cloudflare offers a DNS-level mitigation service that effectively
+blocks these bots as well as intentionally malicious traffic, and they offer
+most of this service for free.
+
+The way Cloudflare works is that in order to use them, you set them up as your
+DNS provider for your domain, then Cloudflare servers place themselves in the
+path between your server and your end users. It works well, and because Cloudflare
+controls your DNS, it can re-issue SSL certificates using Google Security Services
+and LetsEncrypt on your behalf. The SSL certificate on your server is not the
+certificate end users will see. This places Cloudflare in a position to see
+all your https encrypted traffic.
+
+I wrote this extension to alert me when I'm on a site that's using Cloudflare.
+
+This extension is a work in progress, so it's best to build it yourself using
+the instructions provided in the BUILDING.txt file. For now, all this extension
+does is turn its own icon red when it encounters Cloudflare. It also puts URL
+details on the service worker's console log, which I'll probably turn into a counter
+on the icon at some point.
+
+Against my better judgement, I put the extension executable in here, dist.crx. I
+don't recommend using it at this point, and instead suggest building it yourself, but
+it's there if you're brave. At some point I'll consider putting the extension
+in the official extensions repository, but this is what I have today.
+
+-Michael
